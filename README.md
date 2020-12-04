@@ -1,72 +1,165 @@
-# Getting Started with Create React App
+# Prueba Ekoomedia
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Project made in react js version 17.0.1 using hooks
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Stack](#stack)
+- [Versions](#versions)
+- [Clone repo](#clone-repo)
+- [Installation](#instalation)
+- [Build](#build)
+- [Format and linters](#Format-and-linters)
+- [What's included](#whats-included)
+- [Creators](#creators)
 
-### `yarn start`
+## Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- React 17.0.1
+- npm 6.14.4
+- node 12.16.2
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Versions
 
-### `yarn test`
+- [React js](https://reactjs.org)
+- [npm](https://docs.npmjs.com/)
+- [node js](https://nodejs.org/en/blog/release/v12.16.2/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Clone repo
 
-### `yarn build`
+```bash
+# clonar el repo
+$ git clone https://github.com/WilliamPerezBeltran/prueba-ekoomedia.git
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Ir al directorio del app
+$ cd prueba-ekoomedia
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Instalation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+# instalar dependencias
+$ yarn install o npm install
 
-### `yarn eject`
+# ejecutar la app en modo dev
+$ yarn start o npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Build
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Run `build` to build the project. The build artifacts will be stored in the `build/` directory.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```bash
+# build for production with minification
+$ npm run build
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Format code
 
-## Learn More
+```bash
+# Install prettier
+$ npm install --save-dev --save-exact prettier
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Format code
+$ prettier -w .
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
 
-### Code Splitting
+## What's included
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Within the download you'll find the following directories and files, logically grouping common assets and providing both compiled and minified variations. You'll see something like this:
 
-### Analyzing the Bundle Size
+```
+React#v17.0.1
+├───.git/
+│   ├───branches/
+│   ├───hooks/
+│   │   ├───applypatch-msg.sample
+│   │   ├───commit-msg.sample
+│   │   ├───fsmonitor-watchman.sample
+│   │   ├───post-update.sample
+│   │   ├───pre-applypatch.sample
+│   │   ├───pre-commit.sample
+│   │   ├───pre-push.sample
+│   │   ├───pre-rebase.sample
+│   │   ├───pre-receive.sample
+│   │   ├───prepare-commit-msg.sample
+│   │   └───update.sample
+│   ├───info/
+│   │   └───exclude
+│   ├───logs/
+│   │   ├───refs/
+│   │   │   ├───heads/
+│   │   │   │   ├───feature/
+│   │   │   │   │   ├───add-form
+│   │   │   │   │   ├───add-navbar-to-app
+│   │   │   │   │   ├───add-sass
+│   │   │   │   │   ├───create-structure
+│   │   │   │   │   ├───delete-yarn
+│   │   │   │   │   ├───implementing-services
+│   │   │   │   │   └───improve-front
+│   │   │   │   └───master
+│   │   │   └───remotes/
+│   │   │       └───heroku/
+│   │   │           └───master
+│   │   └───HEAD
+│   ├───refs/
+│   │   ├───heads/
+│   │   │   ├───feature/
+│   │   │   │   ├───add-form
+│   │   │   │   ├───add-navbar-to-app
+│   │   │   │   ├───add-sass
+│   │   │   │   ├───create-structure
+│   │   │   │   ├───delete-yarn
+│   │   │   │   ├───implementing-services
+│   │   │   │   └───improve-front
+│   │   │   └───master
+│   │   ├───remotes/
+│   │   │   └───heroku/
+│   │   │       └───master
+│   │   └───tags/
+│   ├───COMMIT_EDITMSG
+│   ├───FETCH_HEAD
+│   ├───HEAD
+│   ├───ORIG_HEAD
+│   ├───config
+│   ├───description
+│   ├───index
+│   └───packed-refs
+├───public/
+│   ├───favicon.ico
+│   ├───index.html
+│   ├───logo192.png
+│   ├───logo512.png
+│   ├───manifest.json
+│   └───robots.txt
+├───src/
+│   ├───components/
+│   │   ├───pages/
+│   │   │   ├───Home.js
+│   │   │   ├───Products.js
+│   │   │   └───Products.scss
+│   │   ├───services/
+│   │   │   └───FetchProducts.js
+│   │   ├───Constants.js
+│   │   ├───Navbar.js
+│   │   └───Navbar.scss
+│   ├───images/
+│   │   ├───form.jpg
+│   │   └───home.jpeg
+│   ├───App.js
+│   ├───App.scss
+│   └───index.js
+├───.eslintcache
+├───.gitignore
+├───README.md
+├───package-lock.json
+└───package.json
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```
 
-### Making a Progressive Web App
+## Creators
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+**William Pérez**
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-# prueba-ekoomedia
+- [Git repository from William Pérez](https://github.com/WilliamPerezBeltran)

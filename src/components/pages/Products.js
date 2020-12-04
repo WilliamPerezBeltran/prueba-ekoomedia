@@ -3,24 +3,22 @@ import { useForm } from "react-hook-form";
 import "./Products.scss";
 import * as FetchProducts from "../services/FetchProducts";
 
-
 const Products = () => {
   const { register, errors, handleSubmit } = useForm();
 
   const [entradas, setentradas] = useState([]);
 
-  const procesarFormulario = async(data, e) => {
+  const procesarFormulario = async (data, e) => {
     console.log(data);
     setentradas([...entradas, data]);
     e.target.reset();
 
     if (data) {
-      let response = await FetchProducts.products(data)
-      console.log('response')
-      console.log(response)
-
+      let response = await FetchProducts.products(data);
+      console.log("response");
+      console.log(response);
     } else {
-      console.log('something')
+      console.log("something");
     }
   };
 
@@ -39,12 +37,9 @@ const Products = () => {
               ref={register({
                 required: { value: true, message: "Ingrese un nombre" },
               })}
-
               placeholder="Ingrese título"
             ></input>
-            <span className="text-danger">
-              {errors?.name?.message}
-            </span>
+            <span className="text-danger">{errors?.name?.message}</span>
           </div>
           <div className="inputfield">
             <label>Email</label>
@@ -60,9 +55,7 @@ const Products = () => {
               })}
               placeholder="Ingrese email"
             ></input>
-            <span className="text-danger ">
-              {errors?.email?.message}
-            </span>
+            <span className="text-danger ">{errors?.email?.message}</span>
           </div>
           <div className="inputfield">
             <label>Celular</label>
@@ -75,9 +68,7 @@ const Products = () => {
               })}
               placeholder="Ingrese un celular"
             ></input>
-            <span className="text-danger">
-              {errors?.phone?.message}
-            </span>
+            <span className="text-danger">{errors?.phone?.message}</span>
           </div>
           <div className="inputfield">
             <label>Edad</label>
@@ -86,12 +77,12 @@ const Products = () => {
               type="text"
               className="input"
               ref={register({
-                required: { value: true, message: "Ingrese una edad"},
+                required: { value: true, message: "Ingrese una edad" },
               })}
               placeholder="Ingrese una edad"
             ></input>
             <span className="text-danger">
-               <span> {errors.age && errors.age.message}</span>
+              <span> {errors.age && errors.age.message}</span>
             </span>
           </div>
 

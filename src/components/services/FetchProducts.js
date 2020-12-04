@@ -1,12 +1,8 @@
 import * as constants from "../Constants";
 
-
-
 export const products = async (obj) => {
   try {
-    console.log('entrrooooooooo')
-    console.log('entrrooooooooo')
-    console.log(obj)
+    console.log(obj);
     // const url = `${constants.appLocalBaseUrl}products`;
 
     // var formData = new FormData();
