@@ -1,16 +1,27 @@
 import React, { Fragment, useState } from "react";
 import { useForm } from "react-hook-form";
 import "./Products.scss";
+import * as FetchProducts from "../services/FetchProducts";
+
 
 const Products = () => {
   const { register, errors, handleSubmit } = useForm();
 
   const [entradas, setentradas] = useState([]);
 
-  const procesarFormulario = (data, e) => {
+  const procesarFormulario = async(data, e) => {
     console.log(data);
     setentradas([...entradas, data]);
     e.target.reset();
+
+    if (data) {
+      let response = await FetchProducts.products(data)
+      console.log('response')
+      console.log(response)
+
+    } else {
+      console.log('something')
+    }
   };
 
   return (
@@ -56,7 +67,7 @@ const Products = () => {
           <div className="inputfield">
             <label>Celular</label>
             <input
-              name="celular"
+              name="phone"
               type="text"
               className="input"
               ref={register({
@@ -65,7 +76,7 @@ const Products = () => {
               placeholder="Ingrese un celular"
             ></input>
             <span className="text-danger">
-              {errors?.celular?.message}
+              {errors?.phone?.message}
             </span>
           </div>
           <div className="inputfield">
