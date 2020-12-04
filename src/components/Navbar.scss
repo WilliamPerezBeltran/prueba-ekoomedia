@@ -62,7 +62,9 @@
     color: black;
     font-size: 40px;
     &:hover {
-      background-color: #888888;
+      text-decoration: underline;
+      color:black;
+      background-color: white;
       border-radius: 0;
     }
   }
